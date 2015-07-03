@@ -5,14 +5,13 @@ require 'json'
 require 'pry'
 
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key = "7zl5Kc7VJjqE1M7nDV6zjen6l"
-  config.consumer_secret = "M9uuLOQn3ETXV5o21eTf3H1shwvQtPbjHb4Fj1hwirWaAvIrkq"
-	config.access_token = "3267264800-Apr4AnWmAeWKO9wQb9nvoi95EyeyjehU7rq306u"
-  config.access_token_secret = "cT6lIRhJM4OX4pA7a9tXm747781gimHultgETyyFf8aBn"
+  config.consumer_key = "CONSUMER_KEY"
+  config.consumer_secret = "CONSUMER_SECRET"
+	config.access_token = "ACCESS_TOKEN"
+  config.access_token_secret = "ACCESS_TOKEN_SECRET"
 end
 
 client.user "INDRAgarbagebot"
-
 
 def get_current_state 
 	response = RestClient.get "https://api.particle.io/v1/devices/54ff70066678574942581067/full_state\?access_token=3766bed852ce344d768142fe1cb41d4416d58b5d"
